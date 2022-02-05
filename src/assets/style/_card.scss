@@ -1,0 +1,23 @@
+.card {
+   padding: 2em;
+   background-color: var(--neutral-800);
+   box-shadow: $boxShadow;
+   border-radius: 0.5em;
+
+   .card-header {
+      svg {
+         font-size: 2rem;
+         fill: var(--primary);
+      }
+   }
+
+   .card-footer {
+      margin-top: 1em;
+
+      .title {
+         font-size: 1.125rem;
+         font-weight: 500;
+         margin-bottom: 1em;
+      }
+   }
+}

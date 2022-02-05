@@ -1,0 +1,46 @@
+.not-found {
+   height: 50vh;
+
+   .container {
+      @include flex(column, center);
+      height: inherit;
+
+      h1 {
+         font-size: 4rem;
+         color: var(--primary);
+         background: linear-gradient(
+            90deg,
+            rgb(10, 208, 223),
+            rgb(97, 148, 214),
+            rgb(180, 45, 233)
+         );
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-shadow: $boxShadow;
+      }
+
+      h2 {
+         font-weight: 500;
+      }
+
+      a {
+         color: var(--primary);
+         margin-top: 1em;
+         display: flex;
+         place-items: center;
+         text-transform: capitalize;
+
+         .arrow {
+            margin-left: 0.5em;
+            width: 0.5em;
+            transition: all 0.3s ease;
+         }
+
+         &:hover {
+            .arrow {
+               margin-left: 0.3em;
+            }
+         }
+      }
+   }
+}

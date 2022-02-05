@@ -1,0 +1,22 @@
+@mixin flex($fd: row, $jc: space-between, $ai: center) {
+   display: flex;
+   flex-direction: $fd;
+   justify-content: $jc;
+   align-items: $ai;
+}
+
+@mixin grid($jc: space-between) {
+   display: grid;
+   gap: 3em;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   justify-content: $jc;
+}
+
+$boxShadow: 0px 1.1px 2.1px -8px rgba(0, 0, 0, 0.022),
+   0px 2.8px 5.3px -8px rgba(0, 0, 0, 0.031),
+   0px 6px 10.8px -8px rgba(0, 0, 0, 0.039),
+   0px 12.6px 22.3px -8px rgba(0, 0, 0, 0.048),
+   0px 29px 61px -8px rgba(0, 0, 0, 0.07);
+
+$shadow: 3.1px 4.3px 5.3px rgba(0, 0, 0, 0.073),
+   10.3px 14.5px 17.9px rgba(0, 0, 0, 0.093), 46px 65px 80px rgba(0, 0, 0, 0.14);

@@ -1,0 +1,115 @@
+#projects {
+   border-top: 8px solid var(--neutral-800);
+
+   .section-title {
+      // @include flex(column, center);
+      // text-align: center;
+      margin-bottom: 2em;
+
+      h1 {
+         max-width: 40%;
+      }
+   }
+
+   .project-cover {
+      @include grid();
+      margin-top: 3em;
+      overflow: hidden;
+      height: 80vh;
+   }
+
+   .project-content {
+      padding: 2em 3em;
+      align-self: end;
+      background-color: rgba(#000000, 0.8);
+      transform: translateY(45%);
+      transition: transform 0.5s ease;
+      backdrop-filter: blur(30px);
+      display: grid;
+      gap: 3em;
+      grid-template-columns: auto 35%;
+   }
+
+   .project-header {
+      .title {
+         font-size: 1.125rem;
+         font-weight: 500;
+         margin-bottom: 1em;
+
+         .title-headline {
+            font-weight: 400;
+            font-size: 1.125rem;
+            margin-right: 1em;
+         }
+      }
+
+      .project-desc {
+         transform: translate(1em, 2em);
+         transition: transform 0.5s ease;
+      }
+   }
+
+   .project-footer {
+      align-self: end;
+
+      .btn-secondary {
+         margin-right: 1em;
+         border: 1px solid var(--neutral-100);
+         color: var(--neutral-100);
+         background-color: transparent;
+      }
+
+      .btn {
+         color: var(--neutral-100);
+      }
+   }
+
+   .projects-container:hover {
+      .project-content {
+         transform: translateY(0);
+      }
+
+      .project-desc {
+         transform: translate(0em, 0em);
+      }
+   }
+}
+
+@media (max-width: 1090px) {
+   #projects {
+      .section-title {
+         h1 {
+            max-width: 50%;
+         }
+      }
+   }
+}
+
+@media (max-width: 830px) {
+   #projects {
+      .section-title {
+         h1 {
+            max-width: 100%;
+         }
+      }
+      .project-content {
+         grid-template-columns: 1fr;
+         transform: translateY(65%);
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   #projects {
+      .section-title {
+         h1 {
+            max-width: 100%;
+         }
+      }
+      .project-content {
+         grid-template-columns: 1fr;
+         transform: translateY(70%);
+         padding: 2em;
+      }
+   }
+}

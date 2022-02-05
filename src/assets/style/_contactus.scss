@@ -1,0 +1,98 @@
+#contact-us {
+   background-color: var(--neutral-800);
+   .section-title {
+      margin-bottom: 3em;
+   }
+
+   .contact-content {
+      @include grid();
+
+      .personal-card {
+         background-color: var(--neutral-900);
+         border-radius: 0.5em;
+         overflow: hidden;
+         box-shadow: $boxShadow;
+         transition: all 0.7s ease;
+
+         &:hover {
+            transform: scale(1.06);
+         }
+      }
+
+      .avatar {
+         img {
+            aspect-ratio: 1 / 1.2;
+            object-fit: cover;
+            object-position: top;
+         }
+      }
+
+      .content {
+         padding: 2em;
+         text-align: center;
+
+         h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5em;
+            text-transform: capitalize;
+         }
+
+         h4 {
+            color: var(--primary);
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+         }
+
+         p {
+            margin-top: 0.5em;
+         }
+      }
+   }
+}
+
+.contact-us-sec {
+   .container {
+      @include grid();
+   }
+
+   h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1.7em;
+      position: relative;
+
+      &::after {
+         content: "";
+         height: 5px;
+         width: 5em;
+         border-radius: 0.5em;
+         background-color: var(--primary);
+         position: absolute;
+         inset: auto auto -0.5em 0;
+         opacity: 0.5;
+      }
+   }
+
+   .socials {
+      align-self: end;
+
+      a {
+         font-size: 2em;
+         line-height: 1;
+         display: inline-block;
+         color: var(--primary);
+         transition: opacity 0.4s ease;
+
+         &:not(:last-child) {
+            margin-right: 0.5em;
+         }
+
+         &:hover {
+            opacity: 0.6;
+         }
+      }
+   }
+}
