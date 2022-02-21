@@ -6,6 +6,8 @@
   --neutral-100: hsl(240, 6%, 90%);
   --neutral-300: hsl(240, 6%, 60%);
   --primary: hsl(143, 77%, 53%);
+  --green: hsl(139, 87%, 45%);
+  --yellow: hsl(57, 94%, 63%);
 }
 
 *,
